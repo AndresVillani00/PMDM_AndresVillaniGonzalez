@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="es" dir="ltr">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <script src="js/bootstrap.min.js"></script>
+    <title>Tiempo</title>
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <img src="assets/logo_ifp.png" width="200" height="60">
+            <h1 class="text-end">Dime el Tiempo</h1>
+        </div>
+    </nav>
+   <div class="container">
+    <form class="row g-3">
+        <div class="col-md-12">
+          <label for="validationServer01" class="form-label">Nombre</label>
+          <input type="text" class="form-control is-invalid" id="validationServer01" required>
+          <div class="invalid-feedback">
+            Completa este Campo
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="validationServer03" class="form-label">Ciudad</label>
+          <input type="text" class="form-control is-invalid" id="validationServer03" aria-describedby="validationServer03Feedback" required>
+          <div id="validationServer03Feedback" class="invalid-feedback">
+            Completa este Campo
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="validationServer04" class="form-label">País</label>
+          <select class="form-select is-invalid" id="validationServer04" aria-describedby="validationServer04Feedback" required>
+            <option selected disabled value=""> --- Selecciona --- </option>
+            <option>Venezuela</option>
+            <option>España</option>
+            <option>Italia</option>
+            <option>Alemania</option>
+            <option>Estados Unidos</option>
+          </select>
+          <div id="validationServer04Feedback" class="invalid-feedback">
+            Selecciona un pais
+          </div>
+        </div>
+        <p>
+            Aqui aparecera el Tiempo
+        </p>
+        <div class="col-12">
+          <button class="btn btn-white border border-dark" type="submit">Dime el Tiempo</button>
+        </div>
+      </form>
+   </div>
+
+    <script src="Actividad.js"></script>
+</body>
+</html>
