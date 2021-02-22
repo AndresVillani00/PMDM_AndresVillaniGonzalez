@@ -1,60 +1,92 @@
 <!DOCTYPE html>
+<html lang="en">
 
-<html lang="es" dir="ltr">
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <script src="js/bootstrap.min.js"></script>
-    <title>Tiempo</title>
-</head>
-<body>
-    <nav class="navbar navbar-light bg-light">
-        <div class="container-fluid">
-            <img src="assets/logo_ifp.png" width="200" height="60">
-            <h1 class="text-end">Dime el Tiempo</h1>
-        </div>
-    </nav>
-   <div class="container">
-    <form class="row g-3">
-        <div class="col-md-12">
-          <label for="validationServer01" class="form-label">Nombre</label>
-          <input type="text" class="form-control is-invalid" id="validationServer01" required>
-          <div class="invalid-feedback">
-            Completa este Campo
-          </div>
-        </div>
-        <div class="col-md-6">
-          <label for="validationServer03" class="form-label">Ciudad</label>
-          <input type="text" class="form-control is-invalid" id="validationServer03" aria-describedby="validationServer03Feedback" required>
-          <div id="validationServer03Feedback" class="invalid-feedback">
-            Completa este Campo
-          </div>
-        </div>
-        <div class="col-md-6">
-          <label for="validationServer04" class="form-label">País</label>
-          <select class="form-select is-invalid" id="validationServer04" aria-describedby="validationServer04Feedback" required>
-            <option selected disabled value=""> --- Selecciona --- </option>
-            <option>Venezuela</option>
-            <option>España</option>
-            <option>Italia</option>
-            <option>Alemania</option>
-            <option>Estados Unidos</option>
-          </select>
-          <div id="validationServer04Feedback" class="invalid-feedback">
-            Selecciona un pais
-          </div>
-        </div>
-        <p>
-            Aqui aparecera el Tiempo
-        </p>
-        <div class="col-12">
-          <button class="btn btn-white border border-dark" type="submit">Dime el Tiempo</button>
-        </div>
-      </form>
-   </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dime el Tiempo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" 
+        crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 
-    <script src="Actividad.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <nav class="navbar sticky-top flex-md-nowrap p-10 shadow">
+          <div class="container">
+            <a class="col-md-3 col-lg-2 mr-0 px-3">
+              <img src="assets/logo_ifp.png" height="40rem">
+            </a>
+          <h1 class="navbar px-3">Dime el tiempo</h1>
+        </nav>
+    <div class="container-form">
+      <div class="container">
+        <div class="form-row">
+          <div class="col mt-4">
+            <label for="Nombre">Nombre:</label>
+            <input type="text" id="nombre0" class="form-control">
+              <div id="nombreIncorrecto" class="invalid-feedback">
+                Completa este Campo!!
+              </div>
+          </div>
+            <div class="row">
+              <div class="col m6 s12">
+                <form>
+                  <div id="mensaje_error"></div>
+                    <div class="row">
+                      <div class="col">
+                        <label for="Ciudad">Ciudad</label>
+                        <input type="text" name="ciudad" id="ciudad0" class="form-control">
+                          <div id="ciudadIncorrecto" class="invalid-feedback">
+                            Completa este Campo!!
+                          </div>
+                      </div>
+                    <div class="col">
+                      <label for="País">País</label>
+                      <select name="país" id="pais0" class="form-select" aria-label="Default select example">
+                        <option selected> --- Seleccione --- </option>
+                          <option value="VEN">Venezuela</option>
+                          <option value="ES">España</option>
+                          <option value="ITA">Italia</option>
+                          <option value="GER">Alemania</option>
+                          <option value="USA">Estados Unidos</option>
+                      </select>
+                          <div id="paisIncorrecto" class="invalid-feedback">
+                            Completa este Campo!!
+                          </div>
+                    </div>
+                    </div>
+                    <p class="col-md-4 my-4">
+                      Aqui aparece el Tiempo
+                    </p>
+                     <div class="col-md-2">
+                      <div class="row form-group form-inline">
+                        <button id="submit" class="btn btn-outline-dark mt-4">Dime el tiempo</button>
+                          <div id="error"></div>
+                          <div id="showWeather"></div>
+                     </div>
+                </form>
+                  <div class="row">
+                    <div id="col-12">
+                      <p id="ciudad1"></p>
+                      <p id="pais1"></p>
+                      <p id="tiempo"></p>
+                      <p id="nombre1"></p>
+                    </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+
+  <script src="Actividad.js"></script>
+
 </body>
 </html>
